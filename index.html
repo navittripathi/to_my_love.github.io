@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>One Little Question 💖</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:flex;justify-content:center;align-items:center;overflow:hidden;font-family:Georgia,serif;background:linear-gradient(135deg,#ffdde1,#ee9ca7);color:#7b1830}.card{position:relative;width:min(92%,650px);padding:48px 28px;border-radius:28px;text-align:center;background:rgba(255,255,255,.82);box-shadow:0 20px 70px rgba(100,20,50,.25);z-index:2}.heart{font-size:65px;animation:pulse 1.3s infinite}.title{font-size:clamp(2rem,6vw,3.6rem);margin:12px 0}.subtitle{font-size:1.15rem;line-height:1.6}.buttons{display:flex;justify-content:center;gap:18px;margin-top:28px;flex-wrap:wrap}button{border:0;border-radius:999px;padding:15px 34px;font-size:1.1rem;cursor:pointer;transition:.25s;box-shadow:0 8px 20px rgba(123,24,48,.2)}#yes{background:#e63968;color:white}#no{background:#fff;color:#b4234c}button:hover{transform:scale(1.08)}#message{min-height:30px;margin-top:22px;font-size:1.15rem;font-weight:bold}.hidden{display:none}.celebrate{animation:celebrate .8s ease infinite alternate}.floating{position:absolute;bottom:-30px;font-size:24px;animation:float 8s linear infinite;opacity:.7}@keyframes pulse{50%{transform:scale(1.15)}}@keyframes float{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}@keyframes celebrate{to{transform:scale(1.04) rotate(1deg)}}
+</style>
+</head>
+<body>
+<div class="card" id="card">
+<div class="heart">💖</div>
+<h1 class="title" id="title">Will you marry me?</h1>
+<p class="subtitle" id="subtitle">I promise to choose you in every lifetime, laugh with you through every silly moment, and love you a little more every single day. 🥹</p>
+<div class="buttons" id="buttons"><button id="yes">Yes, forever! 💍</button><button id="no">No 🙈</button></div>
+<div id="message"></div>
+</div>
+<script>
+const noLines=["Think again… I love you too much. 🥺💗","Are you sure? My heart just skipped a beat! 💔","Maybe your finger slipped? Try the beautiful answer again. 😌","But we look so cute in the future together! 🥹💍","I’ll keep asking with all my love… 💞","One tiny ‘yes’ could make two hearts incredibly happy. ✨"];
+let noCount=0;
+const no=document.getElementById('no'),yes=document.getElementById('yes'),message=document.getElementById('message');
+no.addEventListener('click',()=>{message.textContent=noLines[noCount%noLines.length];noCount++;yes.style.transform=`scale(${1+Math.min(noCount*.06,.45)})`;no.textContent=noCount>2?'Please? 🥺':'No 🙈';});
+yes.addEventListener('click',()=>{document.getElementById('title').textContent='SHE SAID YES! 💍✨';document.getElementById('subtitle').textContent='You just made my world sparkle. Here’s to forever, countless adventures, and a lifetime of loving you. I love you endlessly! ❤️';document.getElementById('buttons').classList.add('hidden');message.textContent='Our forever starts here! 🥂💕';document.getElementById('card').classList.add('celebrate');for(let i=0;i<45;i++){const s=document.createElement('span');s.className='floating';s.textContent=['💖','💕','✨','🌹','💍'][Math.floor(Math.random()*5)];s.style.left=Math.random()*100+'vw';s.style.animationDelay=Math.random()*3+'s';s.style.animationDuration=(4+Math.random()*5)+'s';document.body.appendChild(s)}});
+</script>
+</body></html>
