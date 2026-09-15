@@ -3,24 +3,116 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>One Little Question 💖</title>
+<meta name="theme-color" content="#8f2145" />
+<title>Our Forever Story ❤️</title>
 <style>
-*{box-sizing:border-box}body{margin:0;min-height:100vh;display:flex;justify-content:center;align-items:center;overflow:hidden;font-family:Georgia,serif;background:linear-gradient(135deg,#ffdde1,#ee9ca7);color:#7b1830}.card{position:relative;width:min(92%,650px);padding:48px 28px;border-radius:28px;text-align:center;background:rgba(255,255,255,.82);box-shadow:0 20px 70px rgba(100,20,50,.25);z-index:2}.heart{font-size:65px;animation:pulse 1.3s infinite}.title{font-size:clamp(2rem,6vw,3.6rem);margin:12px 0}.subtitle{font-size:1.15rem;line-height:1.6}.buttons{display:flex;justify-content:center;gap:18px;margin-top:28px;flex-wrap:wrap}button{border:0;border-radius:999px;padding:15px 34px;font-size:1.1rem;cursor:pointer;transition:.25s;box-shadow:0 8px 20px rgba(123,24,48,.2)}#yes{background:#e63968;color:white}#no{background:#fff;color:#b4234c}button:hover{transform:scale(1.08)}#message{min-height:30px;margin-top:22px;font-size:1.15rem;font-weight:bold}.hidden{display:none}.celebrate{animation:celebrate .8s ease infinite alternate}.floating{position:absolute;bottom:-30px;font-size:24px;animation:float 8s linear infinite;opacity:.7}@keyframes pulse{50%{transform:scale(1.15)}}@keyframes float{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}@keyframes celebrate{to{transform:scale(1.04) rotate(1deg)}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Georgia,'Times New Roman',serif;color:#5d1830;background:#fff7f8;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 10% 10%,rgba(255,190,205,.45),transparent 30%),radial-gradient(circle at 90% 20%,rgba(255,220,225,.6),transparent 28%);z-index:-2}
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:center;gap:24px;padding:14px;background:rgba(255,247,248,.78);backdrop-filter:blur(12px);border-bottom:1px solid rgba(120,30,60,.08)}
+.nav a{color:#7b1830;text-decoration:none;font-size:.95rem}.nav a:hover{color:#d13b69}
+.music{position:fixed;right:18px;top:65px;z-index:21;border:0;border-radius:999px;padding:11px 16px;background:#7b1830;color:white;box-shadow:0 8px 25px rgba(90,20,45,.22);cursor:pointer}
+section{padding:95px 20px 70px;position:relative}.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding-top:115px;background:linear-gradient(135deg,#ffdfe6,#fff7f8 55%,#f8d7df)}
+.hero-card{width:min(900px,94%);padding:52px 25px;border-radius:38px;background:rgba(255,255,255,.72);box-shadow:0 30px 90px rgba(115,20,55,.18);border:1px solid rgba(255,255,255,.8)}
+.heart{font-size:72px;animation:pulse 1.35s infinite}.eyebrow{text-transform:uppercase;letter-spacing:4px;font-size:.8rem;color:#b13a5d}.hero h1{font-size:clamp(2.5rem,8vw,5.8rem);margin:12px 0;color:#76162f}.hero p{max-width:720px;margin:0 auto;line-height:1.8;font-size:1.18rem}.buttons{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:30px}button.action{border:0;border-radius:999px;padding:16px 32px;font:inherit;font-weight:bold;cursor:pointer;transition:.25s;box-shadow:0 10px 25px rgba(110,20,50,.18)}button.action:hover{transform:translateY(-3px) scale(1.04)}#yes{background:#d73565;color:#fff}#no{background:#fff;color:#9b2447}.message{min-height:34px;margin-top:22px;font-size:1.1rem;font-weight:bold}
+.container{width:min(1100px,94%);margin:auto}.section-title{text-align:center;font-size:clamp(2rem,5vw,3.4rem);margin:0 0 12px;color:#781a35}.section-intro{text-align:center;max-width:720px;margin:0 auto 42px;line-height:1.7;color:#75455a}
+.story{background:#fff}.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.story-card{padding:30px;border-radius:25px;background:linear-gradient(145deg,#fff,#fff0f3);box-shadow:0 15px 45px rgba(110,30,60,.1)}.story-card h3{font-size:1.5rem;margin-top:0}.story-card p{line-height:1.8}
+.timeline-section{background:linear-gradient(180deg,#fff7f8,#ffecef)}.timeline{position:relative;max-width:850px;margin:auto}.timeline:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:3px;background:#e6a0b3;transform:translateX(-50%)}.memory{width:calc(50% - 35px);padding:24px;border-radius:22px;background:#fff;box-shadow:0 12px 35px rgba(100,25,50,.1);position:relative;margin:25px 0}.memory:nth-child(odd){margin-right:auto}.memory:nth-child(even){margin-left:auto}.memory:after{content:"❤";position:absolute;top:28px;width:35px;height:35px;border-radius:50%;display:grid;place-items:center;background:#d73565;color:white;font-size:.85rem}.memory:nth-child(odd):after{right:-53px}.memory:nth-child(even):after{left:-53px}.date{font-size:.8rem;letter-spacing:2px;text-transform:uppercase;color:#b33b5d}.memory h3{margin:8px 0}.memory p{line-height:1.65;margin-bottom:0}
+.photos{background:#fff}.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.photo{min-height:340px;border-radius:25px;overflow:hidden;position:relative;display:flex;align-items:flex-end;background:linear-gradient(145deg,#eeb2c2,#8f2145);box-shadow:0 15px 40px rgba(90,20,45,.14)}.photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;opacity:.88}.photo-caption{position:relative;width:100%;padding:35px 20px 20px;color:white;background:linear-gradient(transparent,rgba(45,5,20,.82));z-index:2}.photo-caption h3{margin:0 0 5px}.photo-caption p{margin:0;font-size:.92rem}
+.promise{background:linear-gradient(135deg,#7b1830,#c43c64);color:white;text-align:center}.promise .section-title{color:white}.promise .section-intro{color:#ffe8ee}.promise-list{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:950px;margin:auto}.promise-item{padding:24px;border:1px solid rgba(255,255,255,.25);border-radius:22px;background:rgba(255,255,255,.1);line-height:1.6}.promise-item span{font-size:2rem}
+.final{min-height:85vh;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at center,#fff,#ffe5eb)}.final-box{max-width:850px}.final-box h2{font-size:clamp(2.4rem,7vw,5rem);margin:10px 0;color:#79172f}.final-box p{font-size:1.2rem;line-height:1.8}.final-buttons{margin-top:25px}.small-note{margin-top:28px;font-size:.85rem;color:#8a6170}
+.hidden{display:none!important}.celebrate{animation:celebrate .7s ease infinite alternate}.burst{position:fixed;z-index:50;pointer-events:none;font-size:26px;animation:burst 2.8s ease-out forwards}.falling{position:fixed;z-index:10;pointer-events:none;bottom:-40px;font-size:24px;animation:float 7s linear forwards;opacity:.9}
+@keyframes pulse{50%{transform:scale(1.14)}}@keyframes celebrate{to{transform:scale(1.035) rotate(.6deg)}}@keyframes float{to{transform:translateY(-115vh) rotate(420deg);opacity:0}}@keyframes burst{0%{transform:translate(0,0) scale(.4) rotate(0);opacity:1}100%{transform:translate(var(--x),var(--y)) scale(1.3) rotate(500deg);opacity:0}}
+@media(max-width:700px){.nav{gap:12px;font-size:.8rem}.nav a:nth-child(3){display:none}.music{top:58px;right:10px}.hero-card{padding:42px 18px}.story-grid,.photo-grid,.promise-list{grid-template-columns:1fr}.timeline:before{left:12px}.memory,.memory:nth-child(odd),.memory:nth-child(even){width:calc(100% - 35px);margin-left:35px}.memory:after,.memory:nth-child(odd):after,.memory:nth-child(even):after{left:-45px;right:auto}.photo{min-height:390px}}
 </style>
 </head>
 <body>
-<div class="card" id="card">
+<nav class="nav"><a href="#story">Our Story</a><a href="#memories">Memories</a><a href="#photos">Photos</a><a href="#forever">Forever</a></nav>
+<button class="music" id="musicBtn">🎵 Our song: OFF</button>
+
+<section class="hero" id="home">
+<div class="hero-card" id="card">
+<div class="eyebrow">A little question from my heart</div>
 <div class="heart">💖</div>
-<h1 class="title" id="title">Will you marry me?</h1>
-<p class="subtitle" id="subtitle">I promise to choose you in every lifetime, laugh with you through every silly moment, and love you a little more every single day. 🥹</p>
-<div class="buttons" id="buttons"><button id="yes">Yes, forever! 💍</button><button id="no">No 🙈</button></div>
-<div id="message"></div>
+<h1 id="title">Will you marry me?</h1>
+<p id="subtitle">I don't want just a moment with you. I want the ordinary mornings, ridiculous laughs, difficult days, adventures, celebrations, and every beautiful little moment in between.</p>
+<div class="buttons" id="buttons"><button class="action" id="yes">Yes, forever! 💍</button><button class="action" id="no">No 🙈</button></div>
+<div class="message" id="message"></div>
 </div>
+</section>
+
+<section class="story" id="story"><div class="container">
+<h2 class="section-title">Our Story ❤️</h2><p class="section-intro">Some stories are written in books. Ours is written in conversations, smiles, memories, tiny surprises, and all the moments that made me realize: <b>it's you.</b></p>
+<div class="story-grid">
+<div class="story-card"><h3>💌 The beginning</h3><p>Somewhere between a hello and all the conversations that followed, you became more than a person in my life. You became the person I wanted to tell everything to.</p></div>
+<div class="story-card"><h3>✨ The little things</h3><p>It isn't only the big moments. It's your smile, your messages, the silly jokes, the comfortable silence, and the way a normal day becomes special when you're in it.</p></div>
+<div class="story-card"><h3>🌙 The realization</h3><p>I slowly stopped imagining a future and started imagining <i>our</i> future. That's when I knew this wasn't just a chapter I wanted to read — it was the whole story I wanted to live.</p></div>
+<div class="story-card"><h3>💍 The question</h3><p>So here I am, asking the biggest little question of my life. Not because I promise perfection, but because I promise to keep choosing you, learning with you, and loving you.</p></div>
+</div></div></section>
+
+<section class="timeline-section" id="memories"><div class="container">
+<h2 class="section-title">Our Memory Lane 🥹</h2><p class="section-intro">Replace these moments with your real dates and memories. Every great forever is made from tiny moments.</p>
+<div class="timeline">
+<div class="memory"><div class="date">The beginning</div><h3>Our first hello 💫</h3><p>Write the story of how you first met, your first message, or the first moment that made you smile.</p></div>
+<div class="memory"><div class="date">A day to remember</div><h3>Our first special memory 🌹</h3><p>Add your favorite date, trip, conversation, or the moment you both still talk about.</p></div>
+<div class="memory"><div class="date">Somewhere along the way</div><h3>When I knew ❤️</h3><p>Tell her about the moment you realized she wasn't just someone you loved — she was someone you wanted beside you for life.</p></div>
+<div class="memory"><div class="date">Today</div><h3>The question 💍</h3><p>And now we arrive here: one question, two hearts, and hopefully the beginning of our favorite chapter.</p></div>
+</div></div></section>
+
+<section class="photos" id="photos"><div class="container">
+<h2 class="section-title">Little Pieces of Us 📸</h2><p class="section-intro">These are beautiful placeholders for now. Replace the three image URLs below with your own photos in the HTML when you're ready.</p>
+<div class="photo-grid">
+<div class="photo"><img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=900&q=85" alt="Romantic couple holding hands"><div class="photo-caption"><h3>That feeling</h3><p>The kind of happiness that needs no explanation.</p></div></div>
+<div class="photo"><img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=900&q=85" alt="Romantic roses"><div class="photo-caption"><h3>Every little detail</h3><p>Because love lives in the small things too.</p></div></div>
+<div class="photo"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85" alt="Romantic wedding scene"><div class="photo-caption"><h3>The future</h3><p>A thousand memories still waiting to be made.</p></div></div>
+</div></div></section>
+
+<section class="promise" id="forever"><div class="container">
+<h2 class="section-title">My Promises to You 🌙</h2><p class="section-intro">I can't promise every day will be perfect. I can promise I will never stop trying to make our life beautiful.</p>
+<div class="promise-list"><div class="promise-item"><span>🤝</span><br><b>I will choose you.</b><br>On the easy days and the hard ones.</div><div class="promise-item"><span>😂</span><br><b>I will laugh with you.</b><br>Even when our jokes make absolutely no sense.</div><div class="promise-item"><span>🏡</span><br><b>I will build with you.</b><br>A home full of warmth, trust, chaos, and love.</div><div class="promise-item"><span>🌱</span><br><b>I will grow with you.</b><br>Never assuming we are finished becoming better.</div><div class="promise-item"><span>🫶</span><br><b>I will listen.</b><br>Your dreams, worries, stories, and everything between.</div><div class="promise-item"><span>♾️</span><br><b>I will love you.</b><br>Not just today. Again and again and again.</div></div></div></section>
+
+<section class="final"><div class="final-box">
+<div class="heart">💍</div><div class="eyebrow">One last time...</div><h2 id="finalTitle">Will you be my forever?</h2><p id="finalText">I have a whole lifetime of memories I'd love to make with you.</p>
+<div class="final-buttons" id="finalButtons"><button class="action" id="finalYes">YES. A THOUSAND TIMES YES! 💖</button></div>
+<p class="small-note">Made with a ridiculous amount of love, just for you. ❤️</p>
+</div></section>
+
 <script>
-const noLines=["Think again… I love you too much. 🥺💗","Are you sure? My heart just skipped a beat! 💔","Maybe your finger slipped? Try the beautiful answer again. 😌","But we look so cute in the future together! 🥹💍","I’ll keep asking with all my love… 💞","One tiny ‘yes’ could make two hearts incredibly happy. ✨"];
+const noLines=["Think again… I love you too much. 🥺💗","Are you sure? My heart just skipped a beat! 💔","Maybe your finger slipped? Try the beautiful answer again. 😌","But we look so cute in the future together! 🥹💍","I'll keep asking with all my love… 💞","One tiny 'yes' could make two hearts incredibly happy. ✨","Okay… I'll wait right here with my hopeful little heart. 🥺❤️"];
 let noCount=0;
-const no=document.getElementById('no'),yes=document.getElementById('yes'),message=document.getElementById('message');
-no.addEventListener('click',()=>{message.textContent=noLines[noCount%noLines.length];noCount++;yes.style.transform=`scale(${1+Math.min(noCount*.06,.45)})`;no.textContent=noCount>2?'Please? 🥺':'No 🙈';});
-yes.addEventListener('click',()=>{document.getElementById('title').textContent='SHE SAID YES! 💍✨';document.getElementById('subtitle').textContent='You just made my world sparkle. Here’s to forever, countless adventures, and a lifetime of loving you. I love you endlessly! ❤️';document.getElementById('buttons').classList.add('hidden');message.textContent='Our forever starts here! 🥂💕';document.getElementById('card').classList.add('celebrate');for(let i=0;i<45;i++){const s=document.createElement('span');s.className='floating';s.textContent=['💖','💕','✨','🌹','💍'][Math.floor(Math.random()*5)];s.style.left=Math.random()*100+'vw';s.style.animationDelay=Math.random()*3+'s';s.style.animationDuration=(4+Math.random()*5)+'s';document.body.appendChild(s)}});
+const yes=document.getElementById('yes'),no=document.getElementById('no'),message=document.getElementById('message'),card=document.getElementById('card');
+function celebrate(){
+ document.body.style.overflowX='hidden';
+ document.getElementById('title').textContent='SHE SAID YES! 💍✨';
+ document.getElementById('subtitle').textContent='You just turned a question into the beginning of our forever. I cannot wait for every morning, adventure, argument, laugh, hug, dream, and ordinary Tuesday we get to share. I love you endlessly. ❤️';
+ document.getElementById('buttons').classList.add('hidden');
+ message.textContent='OUR FOREVER STARTS HERE! 🥂💕'; card.classList.add('celebrate');
+ document.getElementById('finalTitle').textContent='WE HAVE A FOREVER! 💖';
+ document.getElementById('finalText').textContent='Now scroll, smile, and imagine all the beautiful memories still waiting for us.';
+ document.getElementById('finalButtons').innerHTML='<button class="action" onclick="window.scrollTo({top:0,behavior:\'smooth\'})">Back to the beginning ❤️</button>';
+ burstHearts();
+}
+function burstHearts(){
+ const icons=['💖','💕','💗','💓','💍','🌹','✨','🥂','🫶'];
+ for(let i=0;i<80;i++){
+  const s=document.createElement('span');s.className='burst';s.textContent=icons[Math.floor(Math.random()*icons.length)];
+  s.style.left=(45+Math.random()*10)+'vw';s.style.top=(35+Math.random()*20)+'vh';
+  s.style.setProperty('--x',((Math.random()-.5)*100)+'vw');s.style.setProperty('--y',((-Math.random())*90-10)+'vh');
+  s.style.animationDelay=(Math.random()*.8)+'s';document.body.appendChild(s);setTimeout(()=>s.remove(),4000);
+ }
+ for(let i=0;i<45;i++){
+  const s=document.createElement('span');s.className='falling';s.textContent=icons[Math.floor(Math.random()*icons.length)];
+  s.style.left=Math.random()*100+'vw';s.style.animationDelay=Math.random()*2+'s';s.style.animationDuration=(4+Math.random()*5)+'s';document.body.appendChild(s);setTimeout(()=>s.remove(),10000);
+ }
+}
+no.addEventListener('click',()=>{message.textContent=noLines[noCount%noLines.length];noCount++;yes.style.transform=`scale(${1+Math.min(noCount*.055,.5)})`;no.textContent=noCount>2?'Please? 🥺':'No 🙈';if(noCount>=4)document.getElementById('subtitle').textContent='I am going to keep believing in our happy ending… 💗';});
+yes.addEventListener('click',celebrate);document.getElementById('finalYes').addEventListener('click',celebrate);
+
+// A tiny original Web Audio love melody, so no copyrighted music file is required.
+let audioCtx=null,playing=false,timer=null;const notes=[261.63,329.63,392,329.63,293.66,349.23,440,349.23];let ni=0;
+function playNote(){if(!audioCtx||!playing)return;const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type='sine';o.frequency.value=notes[ni++%notes.length];g.gain.setValueAtTime(.0001,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(.07,audioCtx.currentTime+.06);g.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+.65);o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+.7)}
+document.getElementById('musicBtn').addEventListener('click',async()=>{if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')await audioCtx.resume();playing=!playing;document.getElementById('musicBtn').textContent=playing?'🎵 Our song: ON':'🎵 Our song: OFF';if(playing){playNote();timer=setInterval(playNote,520)}else clearInterval(timer)});
 </script>
-</body></html>
+</body>
+</html>
